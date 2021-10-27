@@ -41,33 +41,33 @@
 
 ## 05-3: формат сертифікатів відкритих ключів X.509v3
 
-Certificate ::= SEQ{\
-    tbsCreteficate TBSCertificate,\
-    signAlg AlgorithmIdent, \
-    sign BIT STRING\  
-}
+>Certificate ::= SEQ{\
+>    tbsCreteficate TBSCertificate,\
+>    signAlg AlgorithmIdent, \
+>    sign BIT STRING\  
+>}
 
-TBSCerteficate ::= SEQ{\
-    version [0] INTEGER, -- v=3\
-    SerialNumber INTEGER (SIZE(0,20)), // ідентифікатор в межах одного ЦСК\
-    signAlg AlgId,\
-    issuer Name, // +SerialNumber ідентифікатор серед всіх ЦСК\
-    validity SEQ {\
-        notBefore Time,\
-        notAfter Time,\
-    },\
-    subject Name, \
-    subjectPubliKey SEQ {\
-        keyAlg AlgId,\
-        key BIT STRING\
-    },\
-[кінець полів для сертифіката першої версії]\
-    issuerUniqueId [1] IMPLICIT OCTET STRING OPTIONAL,\
-    subjectUniqueId [2] IMPLICIT OCTET STRING OPTIONAL,\
-[кінець полів для сертифіката другої версіїб ці поля не рекомендують використовувати]\
-    extensions [3] Extensions\
-
-}
+>TBSCerteficate ::= SEQ{\
+>    version [0] INTEGER, -- v=3\
+>    SerialNumber INTEGER (SIZE(0,20)), // ідентифікатор в межах одного ЦСК\
+>    signAlg AlgId,\
+>    issuer Name, // +SerialNumber ідентифікатор серед всіх ЦСК\
+>    validity SEQ {\
+>        notBefore Time,\
+>        notAfter Time,\
+>    },\
+>    subject Name, \
+>    subjectPubliKey SEQ {\
+>        keyAlg AlgId,\
+>        key BIT STRING\
+>    },\
+>[кінець полів для сертифіката першої версії]\
+>    issuerUniqueId [1] IMPLICIT OCTET STRING OPTIONAL,\
+>    subjectUniqueId [2] IMPLICIT OCTET STRING OPTIONAL,\
+>[кінець полів для сертифіката другої версіїб ці поля не рекомендують використовувати]\
+>    extensions [3] Extensions\
+>
+>}
 
 Name ::= SEQ OF RDN 
 
@@ -75,10 +75,10 @@ RDN = relative distinguished Names
 
 RDN ::= SET OF Attribute
 
-Attribute ::= SEQ {\
-    type OID,\
-    value ANY DEFINED BY Type // зазвичай Direetory String (printeble, UTF8) \
-}
+>Attribute ::= SEQ {\
+>    type OID,\
+>    value ANY DEFINED BY Type // зазвичай Direetory String (printeble, UTF8) \
+>}
 
 **Обов'язкові атрибути**
 1. country (2.5.4.2) "UA"

@@ -63,14 +63,14 @@ TLV-кодування [tag-length-value]
         * T = 18
         * кодується як *STRING
     * OBJECT IDENTIFIER
-        * T = 06
+        * T = 06\
         ![](./pictures/FB.png)\
         ![](./pictures/TOI.png)
     * SEQUENCE 
         * T = 30
     * SET 
         * T = 31
-    * Контекстні типи даних  #! розпиши
+    * Контекстні типи даних  #! розпиши\
         ![](./pictures/EIC.png)
 
 ---
