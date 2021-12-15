@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../volume_creator"
+		},
+		{
+			"path": "../DEX_scripts"
+		}
+	],
+	"settings": {}
+}
